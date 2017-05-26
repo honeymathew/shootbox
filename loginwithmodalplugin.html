@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="site.css">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div>
+
+    <div class="container col-md-3 col-md-offset-4 contents">
+        <form>
+            <div>
+                <h3>Login To ShootBox</h3>
+                <div class="form-group">
+                    <button class="btn btn-block btn-social btn-facebook">
+                        <span class="fa fa-facebook"></span> Sign in with Facebook
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-block btn-social btn-google">
+                        <span class="fa fa-google-plus"></span> Sign in with Google
+                    </button>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-block btn-social btn-twitter">
+                        <span class="fa fa-twitter"></span> Sign in with Twitter
+                    </button>
+                </div>
+                <hr noshade size="1">
+
+                <ul class="list-unstyled">
+                    <li>
+                        <input type="email" placeholder="Email or Phone No" class="form-control"><br>
+                    </li>
+                    <li>
+                        <input type="password" placeholder="Password" class="form-control"><br>
+                    </li>
+
+                    <li>
+                        <input type="checkbox" id="lg_remember" name="lg_remember" class="form-control">
+                        <span id="lgr"><label for="lg_remember">Remember me</label></span>
+                    </li>
+
+                    <li>
+                        <button class="btn btn-success form-control">Login</button>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a  data-toggle="modal" href="#mymodel" id="myln">Forgot Your Password?</a>
+
+                <!--modal-->
+                <div class="modal fade" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    &times;
+                                </button>
+                                <h4 class="modal-title" id="mymodalLabel">Reset My Password</h4>
+                            </div>
+
+                            <div class="modal-body">
+                                <form class="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+
+                                                <input id="emailInput" placeholder="email address" class="form-control" type="email"
+                                                       oninvalid="setCustomValidity('Please enter a valid email address!')"
+                                                       onchange="try{setCustomValidity('')}catch(e){}" required="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <p><a href="#">Sign up now</a> </p>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#myln").click(function(){
+            $("#mymodal").modal();
+        });
+    });
+</script>
+</body>
+</html>
